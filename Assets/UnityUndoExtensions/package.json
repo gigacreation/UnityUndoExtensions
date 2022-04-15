@@ -1,0 +1,17 @@
+{
+    "name": "com.gigacee.undoextensions",
+    "version": "1.0.0",
+    "displayName": "Undo Extensions",
+    "description": "This package provides extensions to do actions as undoable.",
+    "unity": "2019.4",
+    "keywords": [
+        "Unity",
+        "Undo",
+        "Extensions"
+    ],
+    "author": {
+        "name": "Gigacee",
+        "email": "gigacee@gigacreation.jp",
+        "url": "https://www.gigacreation.jp/"
+    }
+}
