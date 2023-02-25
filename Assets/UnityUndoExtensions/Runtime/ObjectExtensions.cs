@@ -1,15 +1,12 @@
 ﻿using System;
-using JetBrains.Annotations;
-using UnityEngine;
 using Object = UnityEngine.Object;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
 
-namespace GigaceeTools
+namespace GigaCreation.Tools.UndoExtensions
 {
-    [UsedImplicitly(ImplicitUseTargetFlags.Members)]
-    public static class UndoExtensions
+    public static class ObjectExtensions
     {
         public static void DoActionAsUndoable<T>(this T self, string name, Action<T> undoableAction) where T : Object
         {
@@ -28,19 +25,6 @@ namespace GigaceeTools
                 EditorUtility.SetDirty(self);
             }
 #endif
-        }
-
-        public static T AddComponentAsUndoable<T>(this GameObject self) where T : Component
-        {
-#if UNITY_EDITOR
-            // ReSharper disable once ConvertIfStatementToReturnStatement
-            if (!EditorApplication.isPlaying)
-            {
-                return Undo.AddComponent<T>(self);
-            }
-#endif
-
-            return self.AddComponent<T>();
         }
 
         public static void DestroyAsUndoable(this Object self)
