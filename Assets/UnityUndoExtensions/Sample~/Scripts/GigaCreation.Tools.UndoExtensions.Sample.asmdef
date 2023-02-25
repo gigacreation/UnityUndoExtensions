@@ -1,0 +1,16 @@
+{
+    "name": "GigaCreation.Tools.UndoExtensions.Sample",
+    "rootNamespace": "",
+    "references": [
+        "GUID:55ea2de2f10e8764193442442bac6085"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
