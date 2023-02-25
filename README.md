@@ -10,8 +10,8 @@ This package provides extensions to do actions as undoable.
 
 ### Package Manager
 
-- `https://github.com/gigacreation/UnityUndoExtensions.git?path=Assets/UnityUndoExtensions`
+- `https://github.com/gigacreation/UnityUndoExtensions.git?path=Assets/UndoExtensions`
 
 ### Manual
 
-- Copy `Assets/UnityUndoExtensions/` to your project.
+- Copy `Assets/UndoExtensions/` to your project.
