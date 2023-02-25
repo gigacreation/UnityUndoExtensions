@@ -3,7 +3,7 @@
     "version": "2.0.0",
     "displayName": "Undo Extensions",
     "description": "This package provides extensions to do actions as undoable.",
-    "unity": "2021.3",
+    "unity": "2019.4",
     "keywords": [
         "Unity",
         "Undo",

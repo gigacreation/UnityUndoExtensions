@@ -1,3 +1,5 @@
+// ReSharper disable UseNegatedPatternInIsExpression
+
 using UnityEditor;
 using UnityEngine;
 
@@ -18,7 +20,7 @@ namespace GigaCreation.Tools.UndoExtensions.Sample.Editor
 
         public override void OnInspectorGUI()
         {
-            if (target is not UndoExtensionsSample undoExtensionsSample)
+            if (!(target is UndoExtensionsSample undoExtensionsSample))
             {
                 return;
             }
