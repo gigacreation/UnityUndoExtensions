@@ -2,9 +2,21 @@
 
 This package provides extensions to do actions as undoable.
 
-## Usage
+## 日本語による説明 / Explanation in Japanese
 
-🚧 TO BE WRITTEN 🚧
+TODO
+
+## Why use Unity Undo Extensions?
+
+Normally, methods such as `GameObject.AddComponent` do not register undo operations. You need to use methods such as `Undo.AddComponent` to register undo operations, but since they are in the `UnityEditor` namespace, they cause build errors.
+
+Unity Undo Extensions checks the current context and registers undo operations only in editor and not play mode.
+
+This package is especially useful to make editor extensions.
+
+## API References
+
+- [Api.md](Api.md)
 
 ## Installation
 
