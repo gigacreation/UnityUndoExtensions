@@ -30,21 +30,6 @@ public static T AddComponentAsUndoable<T>(this GameObject self) where T : Compon
 | ---- | -------------------------------------- |
 | T    | The type of component you want to add. |
 
-### Example
-
-```cs
-using GigaCreation.Tools.UndoExtensions;
-using UnityEngine;
-
-public class AddComponentAsUndoableExample : MonoBehaviour
-{
-    private void Start()
-    {
-        gameObject.AddComponentAsUndoable<SpriteRenderer>();
-    }
-}
-```
-
 ## `ObjectExtensions.DestroyAsUndoable(Object)`
 
 Destroys the object. If in editor and not play mode, records an undo operation so that it can be recreated.
@@ -60,24 +45,6 @@ public static void DestroyAsUndoable(this Object self)
 | Type               | Name | Description                        |
 | ------------------ | ---- | ---------------------------------- |
 | UnityEngine.Object | self | The object that will be destroyed. |
-
-### Example
-
-```cs
-using GigaCreation.Tools.UndoExtensions;
-using UnityEngine;
-
-public class DestroyAsUndoableExample : MonoBehaviour
-{
-    private void Start()
-    {
-        if (TryGetComponent(out SpriteRenderer spriteRenderer))
-        {
-            spriteRenderer.DestroyAsUndoable();
-        }
-    }
-}
-```
 
 ## `ObjectExtensions.DoActionAsUndoable<T>(T, string, Action<T>)`
 
@@ -102,23 +69,3 @@ public static void DoActionAsUndoable<T>(this T self, string name, Action<T> und
 | Name | Description                                                    |
 | ---- | -------------------------------------------------------------- |
 | T    | The type of the reference to the object you will be modifying. |
-
-### Example
-
-```cs
-using GigaCreation.Tools.UndoExtensions;
-using UnityEngine;
-
-public class DoActionAsUndoableExample : MonoBehaviour
-{
-    public int Counter;
-
-    private void Start()
-    {
-        this.DoActionAsUndoable("Increment Counter", x =>
-        {
-            x.Counter++;
-        });
-    }
-}
-```
