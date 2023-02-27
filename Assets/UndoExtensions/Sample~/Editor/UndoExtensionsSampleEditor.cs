@@ -15,7 +15,7 @@ namespace GigaCreation.Tools.UndoExtensions.Sample.Editor
 
         private void OnEnable()
         {
-            _counterProperty = serializedObject.FindProperty("Counter");
+            _counterProperty = serializedObject.FindProperty("_counter");
         }
 
         public override void OnInspectorGUI()
@@ -28,7 +28,7 @@ namespace GigaCreation.Tools.UndoExtensions.Sample.Editor
             EditorGUILayout.Space();
             EditorGUILayout.HelpBox(InfoMessage, MessageType.Info);
             EditorGUILayout.Space();
-            EditorGUILayout.LabelField("### Modify Field ###", EditorStyles.boldLabel);
+            EditorGUILayout.LabelField("### Modify Object ###", EditorStyles.boldLabel);
             serializedObject.Update();
             EditorGUILayout.PropertyField(_counterProperty);
             serializedObject.ApplyModifiedProperties();

@@ -1,5 +1,3 @@
-// ReSharper disable ArrangeObjectCreationWhenTypeEvident
-
 using UnityEngine;
 #if UNITY_EDITOR
 using UnityEditor;
@@ -9,32 +7,26 @@ namespace GigaCreation.Tools.UndoExtensions.Sample
 {
     public class UndoExtensionsSample : MonoBehaviour
     {
-        public int Counter;
+        [SerializeField] private int _counter;
 
         public void IncrementCounter()
         {
-            Counter++;
+            _counter++;
         }
 
         public void DecrementCounter()
         {
-            Counter--;
+            _counter--;
         }
 
         public void IncrementCounterAsUndoable()
         {
-            this.DoActionAsUndoable("Increment Counter", x =>
-            {
-                x.Counter++;
-            });
+            this.DoActionAsUndoable("Increment Counter", x => x.IncrementCounter());
         }
 
         public void DecrementCounterAsUndoable()
         {
-            this.DoActionAsUndoable("Decrement Counter", x =>
-            {
-                x.Counter--;
-            });
+            this.DoActionAsUndoable("Decrement Counter", x => x.DecrementCounter());
         }
 
         public void AddSampleComponent()
